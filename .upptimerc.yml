@@ -4,27 +4,133 @@ repo: upsidia-status
 sites:
   - name: Upsidia Homepage
     url: https://upsidia.ai
+    icon: 🏠
     
   - name: Upsidia Leaderboard  
     url: https://upsidia.ai/leaderboard
+    icon: 🏆
 
 status-website:
-  cname: status.upsidia.ai
+  # cname: status.upsidia.ai  # Uncomment after DNS setup
+  
+  # Branding
   name: Upsidia Status
-  logoUrl: https://upsidia.ai/logo.png  # optional: add your logo URL
-  introTitle: "**Upsidia.ai** Status"
-  introMessage: Real-time monitoring of Upsidia's website performance tracking platform
+  logoUrl: https://upsidia.ai/_next/image?url=%2Fupsidia-logo-transparent.png&w=640&q=75
+  
+  # Theme & Colors
+  theme: dark
+  customHeadHtml: |
+    <style>
+      :root {
+        --body-background-color: #0a0a0a;
+        --body-text-color: #ffffff;
+        --card-background-color: #1a1a1a;
+        --nav-background-color: #111111;
+        --nav-border-bottom-color: #333333;
+        --nav-current-border-bottom-color: #00ff88;
+        --card-border-color: #2a2a2a;
+        --down-border-color: #ef4444;
+        --down-background-color: #7f1d1d;
+        --degraded-border-color: #f59e0b;
+        --up-border-color: #10b981;
+        --up-background-color: #064e3b;
+        --text-color-secondary: #9ca3af;
+      }
+      
+      /* Logo styling */
+      .logo img {
+        max-height: 48px;
+        width: auto;
+      }
+      
+      /* Modern card styling */
+      .card {
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* Professional status indicators */
+      .status.up {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+      }
+      
+      .status.down {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+      }
+      
+      /* Smooth animations */
+      .card, .status {
+        transition: all 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+      }
+      
+      /* Better typography */
+      h1, h2, h3 {
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+      
+      /* Professional header */
+      header {
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--nav-border-bottom-color);
+        backdrop-filter: blur(20px);
+      }
+      
+      /* Response time badges */
+      .response-time {
+        font-weight: 600;
+        color: #10b981;
+      }
+      
+      /* Uptime percentage */
+      .uptime-percent {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    </style>
+  
+  # Content Customization
+  introTitle: "**Upsidia.ai** System Status"
+  introMessage: |
+    Real-time monitoring of all Upsidia services. 
+    All systems operational and being monitored every 5 minutes.
+  
+  # Navigation
   navbar:
     - title: Status
       href: /
-    - title: Back to Upsidia
+    - title: Upsidia.ai
       href: https://upsidia.ai
+    - title: Support
+      href: https://upsidia.ai/support
 
+# Assignees for issues
+assignees:
+  - sabir-gbs
+
+# Monitoring schedule - Every 5 minutes
 workflowSchedule:
   graphs: "0 0 * * *"
-  responseTime: "0,15,30,45 * * * *"  # Every 15 minutes
+  responseTime: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *"
   staticSite: "0 1 * * *"
   summary: "0 0 * * *"
   updateTemplate: "0 0 * * *"
   updates: "0 3 * * *"
-  uptime: "*/5 * * * *"  # Every 5 minutes
+  uptime: "*/5 * * * *"
+
+# Status page text
+i18n:
+  allSystemsOperational: ✅ All Systems Operational
+  activeIncidents: ⚠️ Active Incidents
+  pastIncidents: Past Incidents
+  degraded: Degraded Performance
