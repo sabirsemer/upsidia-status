@@ -2,7 +2,7 @@
   {
     "name": "Upsidia Homepage",
     "url": "https://upsidia.ai",
-    "icon": "https://icons.duckduckgo.com/ip3/upsidia.ai.ico",
+    "icon": "🏠",
     "slug": "upsidia-homepage",
     "status": "down",
     "uptime": "0.00%",
@@ -10,19 +10,20 @@
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
-    "time": 217,
-    "timeDay": 217,
-    "timeWeek": 217,
-    "timeMonth": 217,
-    "timeYear": 217,
+    "time": 207,
+    "timeDay": 207,
+    "timeWeek": 207,
+    "timeMonth": 207,
+    "timeYear": 207,
     "dailyMinutesDown": {
-      "2026-01-18": 7
+      "2026-01-19": 80,
+      "2026-01-18": 73
     }
   },
   {
     "name": "Upsidia Leaderboard",
     "url": "https://upsidia.ai/leaderboard",
-    "icon": "https://icons.duckduckgo.com/ip3/upsidia.ai.ico",
+    "icon": "🏆",
     "slug": "upsidia-leaderboard",
     "status": "down",
     "uptime": "0.00%",
@@ -30,13 +31,14 @@
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
-    "time": 13,
-    "timeDay": 13,
-    "timeWeek": 13,
-    "timeMonth": 13,
-    "timeYear": 13,
+    "time": 11,
+    "timeDay": 11,
+    "timeWeek": 11,
+    "timeMonth": 11,
+    "timeYear": 11,
     "dailyMinutesDown": {
-      "2026-01-18": 7
+      "2026-01-19": 80,
+      "2026-01-18": 73
     }
   }
 ]
